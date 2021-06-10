@@ -1,0 +1,17 @@
+<div>
+    <div>
+        <input placeholder="M/D/YYYY" id="userDate" type="text">
+    </div>
+    <div>
+        <script>
+            function convertDate() {
+                var origFormatDate = document.querySelectorAll("input")[0].value;
+                var userDateArray = origFormatDate.split('/');
+                var newString = userDateArray[2] + "/" + userDateArray[1] + "/" + userDateArray[0];
+                document.getElementById("convertedDate").textContent = newString;
+            }
+        </script>
+        <button onclick="convertDate()">Convert</button>
+    </div>
+    <div id="convertedDate"></div>
+</div>
